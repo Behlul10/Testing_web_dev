@@ -18,10 +18,14 @@ section
     border-radius: 8px;   /* Optional rounded edges */
 }
 
+div {
+    padding: 20px;
+  }
+  
 .container .images .image-box{
     position: relative;
-    height: 400px;
-    width: 210px;
+    height: 500px;
+    width: 510px;
     border-radius: 100px;
 }
 .images .image-box img{
