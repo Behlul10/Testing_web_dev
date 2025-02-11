@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  body {
+    background: 
+    /* vertical lines */
+    repeating-linear-gradient(
+      to right,
+      #45454555 0,
+      #45454555 1px,
+      transparent 1px,
+      transparent 20px
+    ),
+    /* horizontal lines */
+    repeating-linear-gradient(
+      to bottom,
+      #45454555 0,
+      #45454555 1px,
+      transparent 1px,
+      transparent 20px
+    );
+    background-color: black;
+
+    color: white;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+  }
+  
+  /*
+  I can put this in any text so it is aligned
+  */
+  .center-text {
+    text-align: center;
+  }
+
+  .left-text{
+    text-align: left;
+  }
+    /*
+    where I will put my stuff in the website so everything is mobile friendly even in desktop mode
+    */  
+  .container {
+    width: 90%;           /* Always take only 90% of the screen width */
+    max-width: 700px;     /* ...but don't exceed 700px on large screens */
+    margin: 2rem auto;    /* Center horizontally, plus a 2rem gap on top/bottom */
+    padding: 1rem;        /* Some internal spacing, so text isn't at the edge */
+    /*background: #18181800;*/
+    /* Optional border or shadow to visualize container */
+    border: 2px solid #dddddd00;
+  }
+
+  .sub-container {
+    width: 90%;           /* Always take only 90% of the screen width */
+    max-width: 700px;     /* ...but don't exceed 700px on large screens */
+    margin: 2rem auto;    /* Center horizontally, plus a 2rem gap on top/bottom */
+    padding: 1rem;        /* Some internal spacing, so text isn't at the edge */
+    /*background: #18181800;*/
+    /* Optional border or shadow to visualize container */
+    border: 2px solid #ffffff;
+    background-color: #000000;
+  }
+
+  section {
+    padding: 0px;       /* Spacing inside each section */
+    margin-bottom: 500px; /* Space below each section, separating it from the next one */
+    border-radius: 8px;  /* If you like rounded corners */
+  }
+  
+  .hero-section {
+    margin-top: 20px; /* only top margin */
+    /* or padding-top: 2rem; */
+  }
+
+  .contact {
+        display: flex;        /* turn .contact into a flex container */
+        gap: 25%;            /* spacing between items */
+        /* Optionally center them */
+        justify-content: center; 
+        align-items: center;
+  }
+
+      
+  .skill-tags {
+    /* 
+      Use Flexbox to line them up side-by-side 
+      and wrap automatically if there's not enough room 
+    */
+    display: flex;
+    flex-wrap: wrap;
+    /* 
+      Gap controls spacing between items easily 
+      (instead of margin on each .skill-tag)
+    */
+    gap: 0.5rem;  
+    /* 
+      Center the entire group horizontally
+      so it doesn't hug the left edge
+    */
+    justify-content: center;
+  }
+  
+  .skill-tag {
+    background-color: #2E2C2C;     /* Light gray background */
+    color: #ffffff;               /* Text color */
+    padding: 0.5rem 1rem;      /* Space around text */
+    border-radius: 9999px;     /* Big radius => pill shape */
+    display: inline-block;      /* So padding is respected around text */
+    font-size: 0.875rem;       /* Slightly smaller text, up to you */
+    /* 
+      Optional: add a subtle border or box-shadow
+      border: 1px solid #ccc;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    */
+  }
+
+  .sub-section {
+    margin-bottom: 1.5rem; /* or however much space you want */
+  }
+  
+
+  /* 3. Bottom Nav Container (fixed) */
+.bottom-nav {
+    position: fixed;   /* pins it to the viewport */
+    bottom: 0;         /* align to the bottom edge */
+    left: 0;
+    right: 0;
+    
+    display: flex;
+    justify-content: center; /* center the links horizontally */
+    gap: 1rem;               /* space between links */
+    
+    padding: 1rem;
+    
+    /* Optional background so it stands out */
+    background-color: rgba(0, 0, 0, 0);
+    /* If you want a solid color, e.g.: background-color: #333; */
+  }
+  
+  /* 4. “Pill” Button Style for Links */
+  .nav-btn {
+    display: inline-block;       /* ensures padding is respected */
+    padding: 0.5rem 1rem;
+    
+    background-color: #252525;      /* default background for the “pill” */
+    color: #ffffff;                 /* text color */
+    border-radius: 9999px;       /* large radius => pill shape */
+    text-decoration: none;       /* remove underline */
+    font-weight: bold;           /* stand out */
+    
+    transition: background-color 0.3s, color 0.3s; /* smooth hover effect */
+  }
+  
+  .nav-btn:hover {
+    background-color: #ccc;      /* slight darken on hover */
+    color: #000;
+  }
+
+
+  .hero-title {
+  color: #fff;
+  font-size: 3em;
+  text-shadow: 
+  0 0 0px #ffffff,  /* inner glow */
+  0 0 1px #ffffff, /* middle glow */
+  0 0 2px #ffffff, /* outer glow */
+  0 0 2px #ffffff, /* extended glow */
+  0 0 5px #ffffff, 
+  0 0 5px #ffffff, 
+  0 0 7px #ffffff;}
+
+  
+
+  /* Text style for the first h1 to make it glow */
+  
+  .section:first-child h1 {
+      color: #ffffff; /* Choose a color similar to CRT green */
+      text-align: left;
+      font-size: 3em;
+      text-shadow: 
+      0 0 0px #ffffff,  /* inner glow */
+      0 0 1px #ffffff, /* middle glow */
+      0 0 2px #ffffff, /* outer glow */
+      0 0 2px #ffffff, /* extended glow */
+      0 0 5px #ffffff, 
+      0 0 5px #ffffff, 
+      0 0 7px #ffffff;
+  }

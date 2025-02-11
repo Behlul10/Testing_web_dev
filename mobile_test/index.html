@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Center Test</title>
+  <style>
+    body {
+      background: #000000;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      background: #99b0e1;
+      /* This is key: full width on small screens, max 700px on large screens */
+      width: 85%;
+      max-width: 700px;
+
+      /* Center horizontally */
+      margin: 0 auto;
+
+      /* For visibility */
+      border: 2px solid rgba(0, 255, 4, 0.336);
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src ="RED.png" alt="red" width="308" height="357">
+
+    <h1>Hello World</h1>
+    <p>
+      This should be centered on large screens, and full-width on smaller screens.
+    </p>
+  </div>
+</body>
+</html>

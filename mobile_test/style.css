@@ -1,0 +1,30 @@
+/* Reset/Normalize */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    color: white;
+    background: #000000;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+  }
+  
+  .center-text {
+    text-align: center;
+  }
+  
+  
+  /* Container that never hits 100% width, always leaves space on sides */
+  .container {
+    width: 90%;           /* Always take only 90% of the screen width */
+    max-width: 700px;     /* ...but don't exceed 700px on large screens */
+    margin: 2rem auto;    /* Center horizontally, plus a 2rem gap on top/bottom */
+    padding: 1rem;        /* Some internal spacing, so text isn't at the edge */
+    background: #404040;
+    /* Optional border or shadow to visualize container */
+    border: 2px solid #ddd;
+  }
+  
