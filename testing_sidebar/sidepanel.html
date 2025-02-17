@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini Browser Sidebar</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    #tabBar {
+      display: flex;
+      background-color: #f1f1f1;
+      border-bottom: 1px solid #ccc;
+    }
+    .tab {
+      padding: 10px;
+      cursor: pointer;
+      flex: 1;
+      text-align: center;
+    }
+    .tab.active {
+      background-color: #ddd;
+    }
+    #content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    #browserFrame {
+      flex: 1;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="tabBar">
+    <div class="tab active" data-url="https://www.youtube.com/">Tab 1</div>
+    <div class="tab" data-url="https://www.youtube.com/">Tab 2</div>
+    <div class="tab" id="newTab">+</div>
+  </div>
+  <div id="content">
+    <webview id="browserFrame" src="https://www.youtube.com/"></webview>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const browserFrame = document.getElementById('browserFrame');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        if (tab.id === 'newTab') {
+          const url = prompt('Enter URL:');
+          if (url) {
+            const newTab = document.createElement('div');
+            newTab.className = 'tab';
+            newTab.textContent = `Tab ${tabs.length}`;
+            newTab.dataset.url = url;
+            document.getElementById('tabBar').insertBefore(newTab, tab);
+            newTab.addEventListener('click', () => {
+              setActiveTab(newTab);
+            });
+            setActiveTab(newTab);
+          }
+        } else {
+          setActiveTab(tab);
+        }
+      });
+    });
+
+    function setActiveTab(selectedTab) {
+      tabs.forEach(tab => tab.classList.remove('active'));
+      selectedTab.classList.add('active');
+      browserFrame.src = selectedTab.dataset.url;
+    }
+  </script>
+</body>
+</html>

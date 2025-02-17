@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Workspace Browser</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #222; color: white; text-align: center; }
+        #canvasContainer {
+            width: 100vw;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #111;
+            border: 2px solid #444;
+            margin-top: 20px;
+        }
+        #tabList {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .tabButton {
+            background: #444;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #555;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Workspace Engine</h1>
+    <button id="openTab">Open New Tab Inside Workspace</button>
+    <div id="canvasContainer">
+        <h2>Workspace Canvas</h2>
+        <div id="tabList"></div>
+    </div>
+
+    <script src="workspace.js"></script>
+</body>
+</html>

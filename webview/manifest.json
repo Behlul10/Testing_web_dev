@@ -1,0 +1,15 @@
+{
+  "name": "Sidebar with Canvas",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["sidePanel"],
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "Open Sidebar"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

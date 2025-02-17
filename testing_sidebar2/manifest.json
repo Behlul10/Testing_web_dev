@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Custom Sidebar Extension",
+    "version": "1.0",
+    "description": "A sidebar extension to display webpages.",
+    "permissions": ["activeTab", "sidePanel"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_title": "Open Sidebar"
+    },
+    "side_panel": {
+      "default_path": "sidebar.html"
+    }
+  }
+  
